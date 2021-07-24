@@ -4,7 +4,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.types.{ArrayType, StructType}
 
-object Parsing {
+object FlattenDataFrame {
 
 
   def flattenDataFrame(df: DataFrame): DataFrame = {

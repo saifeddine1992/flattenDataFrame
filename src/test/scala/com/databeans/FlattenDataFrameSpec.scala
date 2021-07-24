@@ -1,6 +1,6 @@
 package com.databeans
 
-import com.databeans.Parsing.flattenDataFrame
+import com.databeans.FlattenDataFrame.flattenDataFrame
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.{LongType, StringType, StructType}
 import org.scalatest.GivenWhenThen
@@ -8,7 +8,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
 
-class ParsingSpec extends AnyFlatSpec with Matchers with GivenWhenThen {
+class FlattenDataFrameSpec extends AnyFlatSpec with Matchers with GivenWhenThen {
   implicit val spark: SparkSession = SparkSession
     .builder()
     .master("local[*]")
