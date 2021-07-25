@@ -14,7 +14,7 @@ class FlattenDataFrameSpec extends AnyFlatSpec with Matchers with GivenWhenThen 
   implicit val spark: SparkSession = SparkSession
     .builder()
     .master("local[*]")
-    .appName("Parser_Test")
+    .appName("flattenDataFrame_Test")
     .getOrCreate()
   import spark.implicits._
 
