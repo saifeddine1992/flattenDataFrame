@@ -3,7 +3,7 @@ package com.databeans
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.types.{ArrayType, StructType}
-
+import org.apache.spark.sql.functions.col
 object FlattenDataFrame {
 
 
@@ -26,7 +26,7 @@ object FlattenDataFrame {
           val childFieldNames =
             structType.fieldNames.map(childname => fieldName + "." + childname)
           val newFieldNames = fieldNames.filter(_ != fieldName) ++ childFieldNames
-          import org.apache.spark.sql.functions.col
+
 
           val renamedCols =
             newFieldNames.map { x =>
